@@ -1,12 +1,7 @@
-Welcome to QUp Payment API documentation
-
-<a href="https://github.com/hnthuan/hnthuan.github.io/blob/document/README.md">Click here</a>
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Form Using jQuery - Demo Preview</title>
+    <title>QUp Payment API</title>
     <meta name="robots" content="noindex, nofollow">
     <!-- Include CSS File Here -->
     <link rel="stylesheet" href="css/style.css"/>
@@ -15,13 +10,11 @@ Welcome to QUp Payment API documentation
     <script type="text/javascript">
         $(document).ready(function(){
             $("#login").click(function(){
-                var email = $("#email").val();
                 var password = $("#password").val();
                 // Checking for blank fields.
-                if( email =='' || password ==''){
-                    $('input[type="text"],input[type="password"]').css("border","2px solid red");
+                if(password ==''){
                     $('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
-                    alert("Please fill all fields !");
+                    alert("Please enter password !");
                 }else {
                     // read user and pass
                     if(email != "hnthuan@gmail.com") {
@@ -46,9 +39,9 @@ Welcome to QUp Payment API documentation
 <div class="container">
     <div class="main">
         <form class="form" method="post" action="#">
-            <h2>Create Login Form Using jQuery</h2>
-            <label>Email :</label>
-            <input type="text" name="demail" id="email">
+            <h1>Welcome to QUp Payment API documentation</h1>
+            <a href="https://github.com/hnthuan/hnthuan.github.io/blob/document/README.md">Click here</a>
+            <h2>Please enter password to continue</h2>
             <label>Password :</label>
             <input type="password" name="password" id="password">
             <input type="button" name="login" id="login" value="Login">
