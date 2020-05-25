@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="styles.css">
+  <style type="text/css">:root{
+        --docsify-example-panels-document-width:90%;
+        --docsify-example-panels-wrapper-width:100%;
+        --docsify-example-panels-padding-inner:8px 16px;
+        --docsify-example-panels-padding-surroundings:0px;
+        --docsify-example-panels-left-panel-background:transparent;
+        --docsify-example-panels-left-panel-width:60%;
+        --docsify-example-panels-right-panel-background:transparent;
+        --docsify-example-panels-right-panel-width:40%;
+        --docsify-example-panels-title-background:transparent
+    }
+    .markdown-section{
+        max-width:90%!important;
+        max-width:var(--docsify-example-panels-document-width)!important;
+        width:90%!important;
+        width:var(--docsify-example-panels-document-width)!important
+    }
+    .docsify-example-panels{
+        width:100%;
+        width:var(--docsify-example-panels-wrapper-width)
+    }
+    .docsify-example-panel,.docsify-example-panels{
+        padding:0;
+        display:inline-block
+    }
+    .docsify-example-panel.left-panel{
+        float:left;
+        max-width:60%;
+        max-width:var(--docsify-example-panels-left-panel-width);
+        width:60%;
+        width:var(--docsify-example-panels-left-panel-width);
+        padding:8px 16px;
+        padding:var(--docsify-example-panels-padding-inner);
+        padding-left:0;
+        padding-left:var(--docsify-example-panels-padding-surroundings);
+        background:transparent;
+        background:var(--docsify-example-panels-left-panel-background)
+    }
+    @media only screen and (max-width:1300px){
+        .docsify-example-panel.left-panel{
+            float:none!important;
+            max-width:100%!important;
+            width:100%!important;
+            padding:0!important
+        }
+    }
+    .docsify-example-panel.right-panel{
+        max-width:40%;
+        max-width:var(--docsify-example-panels-right-panel-width);
+        width:40%;
+        width:var(--docsify-example-panels-right-panel-width);
+        padding:8px 16px;
+        padding:var(--docsify-example-panels-padding-inner);
+        padding-right:0;
+        padding-right:var(--docsify-example-panels-padding-surroundings);
+        background:transparent;
+        background:var(--docsify-example-panels-right-panel-background)
+    }
+    @media only screen and (max-width:1300px){
+        .docsify-example-panel.right-panel{
+            max-width:100%!important;
+            width:100%!important;
+            padding:0!important
+        }
+    }
+    .docsify-example-panel.title-panel{
+        padding:0;
+        padding-left:0;
+        padding-left:var(--docsify-example-panels-padding-surroundings);
+        padding-right:0;
+        padding-right:var(--docsify-example-panels-padding-surroundings);
+        max-width:100%;
+        width:100%;
+        background:transparent;
+        background:var(--docsify-example-panels-title-background)
+    }
+    div .anchor-entity {
+      font-size: 1px;
+    }
+</style>
+
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      loadSidebar: true,
+      subMaxLevel: 2,
+      themeColor:'#eb5523',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      name: '',
+      repo: '',
+      copyCode: {
+        buttonText : 'Copy to clipboard',
+        errorText  : 'Error',
+        successText: 'Copied'
+      }
+    }
+
+    Prism.languages.json = {
+    	'property': /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,
+    	'string': {
+    		pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    		greedy: true
+    	},
+    	'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
+    	'punctuation': /[{}[\]);,]/,
+    	'operator': /:/g,
+    	'boolean': /\b(?:true|false)\b/i,
+    	'null': /\bnull\b/i
+    };
+
+    Prism.languages.jsonp = Prism.languages.json;
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-example-panels"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.js"></script>
+  <script src="https://unpkg.com/docsify-copy-code"></script>
+</body>
+</html>
